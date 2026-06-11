@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>С Днём Рождения ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+/* затемнение */
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+z-index:1;
+}
+
+/* 💖 ФОТО */
+
+.photo{
+position:absolute;
+width:200px;
+height:280px;
+background-size:cover;
+background-position:center;
+border-radius:22px;
+opacity:0.75;
+box-shadow:0 12px 35px rgba(0,0,0,0.6);
+z-index:0;
+}
+
+/* ПК */
+
+.p1{
+top:6%;
+left:8%;
+transform:rotate(-7deg);
+}
+
+.p2{
+top:10%;
+right:8%;
+transform:rotate(6deg);
+}
+
+.p3{
+bottom:8%;
+left:10%;
+transform:rotate(-5deg);
+}
+
+.p4{
+bottom:8%;
+right:10%;
+transform:rotate(5deg);
+}
+
+.p5{
+top:35%;
+left:50%;
+transform:translateX(-50%) rotate(-3deg);
+}
+
+/* Телефоны */
+
+@media(max-width:768px){
+
+.photo{
+width:110px;
+height:150px;
+}
+
+.p1{
+top:2%;
+left:3%;
+transform:rotate(-8deg);
+}
+
+.p2{
+top:2%;
+right:3%;
+transform:rotate(7deg);
+}
+
+.p3{
+bottom:2%;
+left:3%;
+transform:rotate(-6deg);
+}
+
+.p4{
+bottom:2%;
+right:3%;
+transform:rotate(6deg);
+}
+
+.p5{
+top:30%;
+left:50%;
+transform:translateX(-50%) rotate(-2deg);
+}
+}
+
+/* текст */
+.content{
+position:relative;
+z-index:2;
+padding:20px;
+}
+
+h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.subtitle{
+font-size:1.3rem;
+margin-bottom:25px;
+}
+
+.btn{
+background:#ff4d88;
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:40px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* секция */
+.section{
+max-width:900px;
+margin:auto;
+padding:80px 20px;
+text-align:center;
+}
+
+.card{
+background:#171717;
+padding:35px;
+border-radius:25px;
+margin-top:25px;
+}
+
+.timer{
+font-size:2rem;
+margin-top:15px;
+color:#ff78aa;
+}
+
+/* музыка */
+#musicBtn{
+position:fixed;
+top:20px;
+right:20px;
+z-index:9999;
+background:#ff4d88;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* сердечки */
+.heart{
+position:fixed;
+top:-20px;
+pointer-events:none;
+animation:fall linear forwards;
+z-index:999;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<button id="musicBtn" onclick="playMusic()">🎵 Музыка</button>
+
+<audio id="music" loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+<div class="hero">
+
+<div class="photo p1" style="background-image:url('1.jpg')"></div>
+<div class="photo p2" style="background-image:url('2.jpg')"></div>
+<div class="photo p3" style="background-image:url('3.jpg')"></div>
+<div class="photo p4" style="background-image:url('4.jpg')"></div>
+<div class="photo p5" style="background-image:url('5.jpg')"></div>
+
+<div class="content">
+<h1>С Днём Рождения ❤️</h1>
+<p class="subtitle">Для самой прекрасной девушки</p>
+
+<button class="btn"
+onclick="document.getElementById('gift').scrollIntoView({behavior:'smooth'})">
+Открыть подарок 🎁
+</button>
+</div>
+
+</div>
+
+<!-- СЕКЦИЯ -->
+<section id="gift" class="section">
+
+<h2 style="font-size:40px;">Моё поздравление ❤️</h2>
+
+<div class="card">
+<p style="font-size:20px; line-height:2;">
+Впервые за почти 4 года я поздравляю тебя с днем рождения именно в твой день рождения, поэтому многое хочу сказать и пожелать. Ты знаешь что я всегда желаю тебе всего самого лучшего и очень хочу чтобы у тебя было хорошее настроение 24/7. Надеюсь что скоро ты найдешь работу которая тебе будет нравится, но желательно чтобы работала раз в неделю, а то и так почти не общаемся потому что вечно работаешь. Хотя лучше выйграй пару миллионов долларов и один дай мне за мое терпение. Хоть я и могу довольно часто злится на тебя но все равно переживаю каждый день особенно когда ты часами не бываешь в сети и я уже листаю украинские каналы с новостью о пропаже дiвочки 17 рокiв. Я пока что не могу до конца осознать что тебе уже 18 потому что привык что тебе там 14, 15, 16 но не 18 же тебе еще рано чем старше становишься тем серьезнее и злее. Вообще я очень часто о тебе думаю ❤️
+</p>
+</div>
+
+<div class="card">
+<h2>Мы знакомы уже</h2>
+<div class="timer" id="days">0</div>
+<p>дней ❤️</p>
+</div>
+
+</section>
+
+<script>
+
+function playMusic(){
+const music = document.getElementById("music");
+music.play();
+document.getElementById("musicBtn").style.display="none";
+}
+
+const startDate = new Date("2024-01-01");
+
+function updateDays(){
+const now = new Date();
+const diff = now - startDate;
+const days = Math.floor(diff/(1000*60*60*24));
+document.getElementById("days").innerText = days;
+}
+
+updateDays();
+
+/* сердечки */
+function createHeart(){
+const heart = document.createElement("div");
+heart.className = "heart";
+heart.innerHTML = "❤️";
+heart.style.left = Math.random()*100 + "vw";
+heart.style.fontSize = (15 + Math.random()*30) + "px";
+heart.style.animationDuration = (4 + Math.random()*5) + "s";
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),9000);
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
